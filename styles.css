@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Agdasima", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  background-color: rgb(222, 12, 40);
+  background-image: url(/projetos/game-project/fotos/red-girl.jpg);
+  background-repeat: no-repeat;
+  background-size: 1200px;
+  background-position: 100% -120%;
+  color: #fff;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  /*background-color: #000;*/
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: absolute;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #000000;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 5s ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.hero-image img {
+  width: 500px;
+  height: auto;
+}
+
+.features-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  background-color: #22222200;
+}
+
+.feature-card {
+  background-color: rgba(34, 32, 32, 0.699);
+  padding: 20px;
+  border-radius: 20px;
+  width: 30%;
+  text-align: center;
+}
+
+.feature-card h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 1.2rem;
+  color: #ccc;
+}

@@ -9,11 +9,70 @@ body {
   font-weight: 700;
   font-style: normal;
   background-color: rgb(222, 12, 40);
-  background-image: url(/projetos/game-project/fotos/red-girl.jpg);
+  background-image: url(/fotos/red-girl.jpg);
   background-repeat: no-repeat;
   background-size: 1200px;
-  background-position: 100% -120%;
+  background-position: 100% 0%;
   color: #fff;
+}
+
+nav{
+  background-color: rgba(34, 32, 32, 0.699) ;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+nav .logo{
+  height: 90px; /* Ajuste a altura da logo conforme necessário */
+  margin-right: 50px; /* Espaço entre a logo e a lista de navegação */
+  
+}
+
+.logo{
+  background-size: 10px;
+}
+
+nav ul{ /* centralização da barra*/
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Organiza os itens da lista em linha */
+  justify-content: left;/* Centraliza a lista */
+  flex-grow: 1; /* Faz a lista ocupar o espaço restante */
+
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  background-color: #575757;
+  border-radius: 5px;
+}
+
+body::before {
+  content: "";
+  clip-path: polygon(60% 0, 100% 0, 100% 100%, 60% 100%);/* Recorte no lado esquerdo */
+  position: absolute;
+  width: 100%; /*largura*/
+  height: 700px; /* Ajuste a altura conforme necessário */
+  background-image: url('/fotos/red-girl-removebg.png'); /* Imagem de fundo */
+  background-size: cover;
+  background-position: center;
+  z-index: 2; /* Faz o pseudo-elemento ficar acima da nav */
+  transform: translateY(0%); /* Ajusta a parte da imagem que "sai" sobre a nav */
+  /*border: 2px solid rgb(81, 255, 0);*/
 }
 
 .hero-section {
@@ -115,12 +174,13 @@ body {
   background-color: #22222200;
 }
 
-.feature-card {
+.feature-card { /* cards em si*/
   background-color: rgba(34, 32, 32, 0.699);
   padding: 20px;
   border-radius: 20px;
   width: 30%;
   text-align: center;
+  z-index: 3;
 }
 
 .feature-card h3 {
